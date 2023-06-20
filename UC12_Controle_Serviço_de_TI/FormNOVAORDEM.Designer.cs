@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxCLIENTE = new System.Windows.Forms.TextBox();
+            this.textBoxENDERECO = new System.Windows.Forms.TextBox();
+            this.textBoxDATASAIDA = new System.Windows.Forms.TextBox();
+            this.textBoxDATAEMISSAO = new System.Windows.Forms.TextBox();
+            this.textBoxDATAENTRADA = new System.Windows.Forms.TextBox();
+            this.textBoxORCAMENTO = new System.Windows.Forms.TextBox();
+            this.textBoxSTATUS = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,59 +43,59 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxPROBLEMA = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxOBSERVACOES = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxCLIENTE
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxCLIENTE.Location = new System.Drawing.Point(12, 28);
+            this.textBoxCLIENTE.Name = "textBoxCLIENTE";
+            this.textBoxCLIENTE.Size = new System.Drawing.Size(231, 20);
+            this.textBoxCLIENTE.TabIndex = 0;
             // 
-            // textBox2
+            // textBoxENDERECO
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(306, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxENDERECO.Location = new System.Drawing.Point(12, 68);
+            this.textBoxENDERECO.Name = "textBoxENDERECO";
+            this.textBoxENDERECO.Size = new System.Drawing.Size(306, 20);
+            this.textBoxENDERECO.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxDATASAIDA
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 200);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 20);
-            this.textBox3.TabIndex = 2;
+            this.textBoxDATASAIDA.Location = new System.Drawing.Point(12, 200);
+            this.textBoxDATASAIDA.Name = "textBoxDATASAIDA";
+            this.textBoxDATASAIDA.Size = new System.Drawing.Size(163, 20);
+            this.textBoxDATASAIDA.TabIndex = 2;
             // 
-            // textBox4
+            // textBoxDATAEMISSAO
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 115);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 20);
-            this.textBox4.TabIndex = 3;
+            this.textBoxDATAEMISSAO.Location = new System.Drawing.Point(12, 115);
+            this.textBoxDATAEMISSAO.Name = "textBoxDATAEMISSAO";
+            this.textBoxDATAEMISSAO.Size = new System.Drawing.Size(163, 20);
+            this.textBoxDATAEMISSAO.TabIndex = 3;
             // 
-            // textBox5
+            // textBoxDATAENTRADA
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 154);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 20);
-            this.textBox5.TabIndex = 4;
+            this.textBoxDATAENTRADA.Location = new System.Drawing.Point(12, 154);
+            this.textBoxDATAENTRADA.Name = "textBoxDATAENTRADA";
+            this.textBoxDATAENTRADA.Size = new System.Drawing.Size(163, 20);
+            this.textBoxDATAENTRADA.TabIndex = 4;
             // 
-            // textBox6
+            // textBoxORCAMENTO
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 242);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(111, 20);
-            this.textBox6.TabIndex = 5;
+            this.textBoxORCAMENTO.Location = new System.Drawing.Point(12, 242);
+            this.textBoxORCAMENTO.Name = "textBoxORCAMENTO";
+            this.textBoxORCAMENTO.Size = new System.Drawing.Size(111, 20);
+            this.textBoxORCAMENTO.TabIndex = 5;
             // 
-            // textBox7
+            // textBoxSTATUS
             // 
-            this.textBox7.Location = new System.Drawing.Point(12, 281);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(111, 20);
-            this.textBox7.TabIndex = 6;
+            this.textBoxSTATUS.Location = new System.Drawing.Point(12, 281);
+            this.textBoxSTATUS.Name = "textBoxSTATUS";
+            this.textBoxSTATUS.Size = new System.Drawing.Size(111, 20);
+            this.textBoxSTATUS.TabIndex = 6;
             // 
             // label1
             // 
@@ -169,12 +169,12 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Problema apresentado:";
             // 
-            // textBox8
+            // textBoxPROBLEMA
             // 
-            this.textBox8.Location = new System.Drawing.Point(12, 322);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(306, 20);
-            this.textBox8.TabIndex = 14;
+            this.textBoxPROBLEMA.Location = new System.Drawing.Point(12, 322);
+            this.textBoxPROBLEMA.Name = "textBoxPROBLEMA";
+            this.textBoxPROBLEMA.Size = new System.Drawing.Size(306, 20);
+            this.textBoxPROBLEMA.TabIndex = 14;
             // 
             // label9
             // 
@@ -185,12 +185,12 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Observações:";
             // 
-            // textBox9
+            // textBoxOBSERVACOES
             // 
-            this.textBox9.Location = new System.Drawing.Point(12, 362);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(306, 20);
-            this.textBox9.TabIndex = 16;
+            this.textBoxOBSERVACOES.Location = new System.Drawing.Point(12, 362);
+            this.textBoxOBSERVACOES.Name = "textBoxOBSERVACOES";
+            this.textBoxOBSERVACOES.Size = new System.Drawing.Size(306, 20);
+            this.textBoxOBSERVACOES.TabIndex = 16;
             // 
             // FormNOVAORDEM
             // 
@@ -198,9 +198,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBoxOBSERVACOES);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxPROBLEMA);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -208,13 +208,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxSTATUS);
+            this.Controls.Add(this.textBoxORCAMENTO);
+            this.Controls.Add(this.textBoxDATAENTRADA);
+            this.Controls.Add(this.textBoxDATAEMISSAO);
+            this.Controls.Add(this.textBoxDATASAIDA);
+            this.Controls.Add(this.textBoxENDERECO);
+            this.Controls.Add(this.textBoxCLIENTE);
             this.Name = "FormNOVAORDEM";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -224,13 +224,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxCLIENTE;
+        private System.Windows.Forms.TextBox textBoxENDERECO;
+        private System.Windows.Forms.TextBox textBoxDATASAIDA;
+        private System.Windows.Forms.TextBox textBoxDATAEMISSAO;
+        private System.Windows.Forms.TextBox textBoxDATAENTRADA;
+        private System.Windows.Forms.TextBox textBoxORCAMENTO;
+        private System.Windows.Forms.TextBox textBoxSTATUS;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -239,9 +239,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxPROBLEMA;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxOBSERVACOES;
     }
 }
 
