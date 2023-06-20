@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEDITARORDEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEDITARORDEM.Designer.cs">
+      <DependentUpon>FormEDITARORDEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEXCLUIRORDEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEXCLUIRORDEM.Designer.cs">
+      <DependentUpon>FormEXCLUIRORDEM.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNOVAORDEM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormEDITARORDEM.resx">
+      <DependentUpon>FormEDITARORDEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEXCLUIRORDEM.resx">
+      <DependentUpon>FormEXCLUIRORDEM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNOVAORDEM.resx">
       <DependentUpon>FormNOVAORDEM.cs</DependentUpon>
     </EmbeddedResource>
