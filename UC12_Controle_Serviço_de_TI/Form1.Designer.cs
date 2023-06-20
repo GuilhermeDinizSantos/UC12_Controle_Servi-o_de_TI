@@ -57,6 +57,7 @@
             this.toolStripMenuItem1_ORDEM.Name = "toolStripMenuItem1_ORDEM";
             this.toolStripMenuItem1_ORDEM.Size = new System.Drawing.Size(126, 20);
             this.toolStripMenuItem1_ORDEM.Text = "ORDEM DE SERVIÇO";
+            this.toolStripMenuItem1_ORDEM.Click += new System.EventHandler(this.toolStripMenuItem1_ORDEM_Click);
             // 
             // toolStripMenuItem2
             // 

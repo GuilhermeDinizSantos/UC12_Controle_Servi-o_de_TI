@@ -19,6 +19,13 @@ namespace UC12_Controle_Serviço_de_TI
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            Form nova_ordem = new FormNOVAORDEM();
+            nova_ordem.ShowDialog();
+            
+        }
+
+        private void toolStripMenuItem1_ORDEM_Click(object sender, EventArgs e)
+        {
 
         }
     }
