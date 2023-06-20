@@ -28,5 +28,11 @@ namespace UC12_Controle_Serviço_de_TI
         {
 
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Form editar_ordem = new FormEDITARORDEM();
+            editar_ordem.ShowDialog();
+        }
     }
 }
