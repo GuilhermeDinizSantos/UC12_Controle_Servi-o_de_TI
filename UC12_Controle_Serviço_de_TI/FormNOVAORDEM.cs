@@ -7,14 +7,241 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace UC12_Controle_Serviço_de_TI
 {
+
+    
+
     public partial class FormNOVAORDEM : Form
     {
+
+        string servidor;
+        MySqlConnection conexao;
+        MySqlCommand comando;
+
         public FormNOVAORDEM()
         {
+
             InitializeComponent();
+
+            servidor = "Server=localhost;Database=ordem_servico;Uid=root;Pwd=";
+            conexao = new MySqlConnection(servidor);
+            comando = conexao.CreateCommand();
+
+
+            atualizar_combobox();
+        }
+
+        public void atualizar_combobox()
+        {
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "SELECT nome FROM cliente";
+
+                MySqlDataReader readerCliente = comando.ExecuteReader();
+
+                while (readerCliente.Read())
+                {
+                    comboBox_clientes.Items.Add(readerCliente.GetString(0));
+                }
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+
+            finally
+            {
+                conexao.Close();
+
+            }
+
+
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "SELECT nome FROM colaborador";
+
+                MySqlDataReader readerCliente = comando.ExecuteReader();
+
+                while (readerCliente.Read())
+                {
+                    comboBox_clientes.Items.Add(readerCliente.GetString(0));
+                }
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+
+            finally
+            {
+                conexao.Close();
+
+            }
+
+
+
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "SELECT endereco FROM colaborador";
+
+                MySqlDataReader readerColaborador = comando.ExecuteReader();
+
+                while (readerColaborador.Read())
+                {
+                    comboBox_clientes.Items.Add(readerColaborador.GetString(0));
+                }
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+
+            finally
+            {
+                conexao.Close();
+
+            }
+
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "SELECT marca FROM equipamento";
+
+                MySqlDataReader readerMarca = comando.ExecuteReader();
+
+                while (readerMarca.Read())
+                {
+                    comboBox_clientes.Items.Add(readerMarca.GetString(0));
+                }
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+
+            finally
+            {
+                conexao.Close();
+
+            }
+
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "SELECT modelo FROM equipamento";
+
+                MySqlDataReader readerModelo = comando.ExecuteReader();
+
+                while (readerModelo.Read())
+                {
+                    comboBox_clientes.Items.Add(readerModelo.GetString(0));
+                }
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+
+            finally
+            {
+                conexao.Close();
+
+            }
+        }
+
+
+        private void button_CRIAR_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "INSERT into equipamento (entrada_equipamento, retirada_equipamento, marca, modelo) VALUES ('"+ textBoxDATAENTRADA + "', '" + textBoxDATASAIDA + "', '" + comboBox_marca.Text + "', '" + comboBox_Modelo.Text + "', ); ";
+
+                MySqlDataReader readerCliente = comando.ExecuteReader();
+
+                while (readerCliente.Read())
+                {
+                    comboBox_clientes.Items.Add(readerCliente.GetString(0));
+                }
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+
+            finally
+            {
+                conexao.Close();
+
+            }
+
+
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "INSERT into orcamento (valor_total) VALUES ('" + textBoxORCAMENTO + "' ); ";
+
+                MySqlDataReader readerCliente = comando.ExecuteReader();
+
+                while (readerCliente.Read())
+                {
+                    comboBox_clientes.Items.Add(readerCliente.GetString(0));
+                }
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+
+            finally
+            {
+                conexao.Close();
+
+            }
+
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "INSERT into ordem_de_servico (entrada_equipamento, retirada_equipamento, marca, modelo) VALUES ('" + textBoxDATAENTRADA + "', '" + textBoxDATASAIDA + "', '" + comboBox_marca.Text + "', '" + comboBox_Modelo.Text + "', ); ";
+
+                MySqlDataReader readerCliente = comando.ExecuteReader();
+
+                while (readerCliente.Read())
+                {
+                    comboBox_clientes.Items.Add(readerCliente.GetString(0));
+                }
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+
+            finally
+            {
+                conexao.Close();
+
+            }
+
+        }
+
+        private void comboBox_clientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
