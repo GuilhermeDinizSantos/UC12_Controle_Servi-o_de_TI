@@ -96,7 +96,7 @@ namespace UC12_Controle_Serviço_de_TI
 
                 while (readerColaborador.Read())
                 {
-                    comboBox_endereco.Items.Add(readerColaborador.GetString(0));
+                    textBoxENDERECO.Text = (readerColaborador.GetString(0));
                 }
             }
 

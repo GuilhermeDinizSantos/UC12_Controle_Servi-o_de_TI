@@ -261,6 +261,7 @@
             this.textBoxENDERECO.Name = "textBoxENDERECO";
             this.textBoxENDERECO.Size = new System.Drawing.Size(230, 20);
             this.textBoxENDERECO.TabIndex = 45;
+            this.textBoxENDERECO.Text = " ";
             // 
             // FormNOVAORDEM
             // 
