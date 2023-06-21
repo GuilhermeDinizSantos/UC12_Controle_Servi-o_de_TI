@@ -26,7 +26,7 @@ namespace UC12_Controle_Serviço_de_TI
 
             InitializeComponent();
 
-            servidor = "Server=localhost;Database=ordem_servico;Uid=root;Pwd=";
+            servidor = "Server=10.55.51.1;Database=ordem_servico;Uid=root;Pwd=";
             conexao = new MySqlConnection(servidor);
             comando = conexao.CreateCommand();
 
@@ -70,7 +70,7 @@ namespace UC12_Controle_Serviço_de_TI
 
                 while (readerCliente.Read())
                 {
-                    comboBox_clientes.Items.Add(readerCliente.GetString(0));
+                    comboBox_colaboradores.Items.Add(readerCliente.GetString(0));
                 }
             }
 
@@ -96,7 +96,7 @@ namespace UC12_Controle_Serviço_de_TI
 
                 while (readerColaborador.Read())
                 {
-                    comboBox_clientes.Items.Add(readerColaborador.GetString(0));
+                    comboBox_endereco.Items.Add(readerColaborador.GetString(0));
                 }
             }
 
@@ -120,7 +120,7 @@ namespace UC12_Controle_Serviço_de_TI
 
                 while (readerMarca.Read())
                 {
-                    comboBox_clientes.Items.Add(readerMarca.GetString(0));
+                    comboBox_marca.Items.Add(readerMarca.GetString(0));
                 }
             }
 
@@ -144,7 +144,7 @@ namespace UC12_Controle_Serviço_de_TI
 
                 while (readerModelo.Read())
                 {
-                    comboBox_clientes.Items.Add(readerModelo.GetString(0));
+                    comboBox_Modelo.Items.Add(readerModelo.GetString(0));
                 }
             }
 
@@ -167,7 +167,7 @@ namespace UC12_Controle_Serviço_de_TI
             try
             {
                 conexao.Open();
-                comando.CommandText = "INSERT into equipamento (entrada_equipamento, retirada_equipamento, marca, modelo) VALUES ('"+ textBoxDATAENTRADA + "', '" + textBoxDATASAIDA + "', '" + comboBox_marca.Text + "', '" + comboBox_Modelo.Text + "', ); ";
+                comando.CommandText = "INSERT INTO equipamento(entrada_equipamento, retirada_equipamento, marca, modelo) VALUES ('"+ textBoxDATAENTRADA.Text + "', '" + textBoxDATASAIDA.Text + "', '" + comboBox_marca.Text + "', '" + comboBox_Modelo.Text + "'); ";
 
                 MySqlDataReader readerCliente = comando.ExecuteReader();
 
@@ -192,7 +192,7 @@ namespace UC12_Controle_Serviço_de_TI
             try
             {
                 conexao.Open();
-                comando.CommandText = "INSERT into orcamento (valor_total) VALUES ('" + textBoxORCAMENTO + "' ); ";
+                comando.CommandText = "INSERT INTO orcamento(valor_total) VALUES ('" + textBoxORCAMENTO + "'); ";
 
                 MySqlDataReader readerCliente = comando.ExecuteReader();
 
