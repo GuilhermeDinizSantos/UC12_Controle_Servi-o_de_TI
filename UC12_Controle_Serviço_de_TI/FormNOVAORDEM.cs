@@ -26,7 +26,7 @@ namespace UC12_Controle_Serviço_de_TI
 
             InitializeComponent();
 
-            servidor = "Server=10.55.51.1;Database=ordem_servico;Uid=root;Pwd=";
+            servidor = "Server=localhost;Database=bd_ordem_ti;Uid=root;Pwd=";
             conexao = new MySqlConnection(servidor);
             comando = conexao.CreateCommand();
 

@@ -48,11 +48,11 @@
             this.comboBox_colaboradores = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox_clientes = new System.Windows.Forms.ComboBox();
-            this.comboBox_endereco = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox_marca = new System.Windows.Forms.ComboBox();
             this.comboBox_Modelo = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.textBoxENDERECO = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label9
@@ -221,14 +221,6 @@
             this.comboBox_clientes.TabIndex = 39;
             this.comboBox_clientes.SelectedIndexChanged += new System.EventHandler(this.comboBox_clientes_SelectedIndexChanged);
             // 
-            // comboBox_endereco
-            // 
-            this.comboBox_endereco.FormattingEnabled = true;
-            this.comboBox_endereco.Location = new System.Drawing.Point(28, 122);
-            this.comboBox_endereco.Name = "comboBox_endereco";
-            this.comboBox_endereco.Size = new System.Drawing.Size(231, 21);
-            this.comboBox_endereco.TabIndex = 40;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -263,16 +255,23 @@
             this.label12.TabIndex = 44;
             this.label12.Text = "Modelo:";
             // 
+            // textBoxENDERECO
+            // 
+            this.textBoxENDERECO.Location = new System.Drawing.Point(28, 122);
+            this.textBoxENDERECO.Name = "textBoxENDERECO";
+            this.textBoxENDERECO.Size = new System.Drawing.Size(230, 20);
+            this.textBoxENDERECO.TabIndex = 45;
+            // 
             // FormNOVAORDEM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxENDERECO);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.comboBox_Modelo);
             this.Controls.Add(this.comboBox_marca);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox_endereco);
             this.Controls.Add(this.comboBox_clientes);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox_colaboradores);
@@ -322,10 +321,10 @@
         private System.Windows.Forms.ComboBox comboBox_colaboradores;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox_clientes;
-        private System.Windows.Forms.ComboBox comboBox_endereco;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox_marca;
         private System.Windows.Forms.ComboBox comboBox_Modelo;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBoxENDERECO;
     }
 }
