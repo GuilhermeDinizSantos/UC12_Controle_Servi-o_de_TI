@@ -90,7 +90,7 @@ namespace UC12_Controle_Serviço_de_TI
             try
             {
                 conexao.Open();
-                comando.CommandText = "SELECT endereco FROM colaborador";
+                comando.CommandText = "SELECT endereco FROM tbl_cliente";
 
                 MySqlDataReader readerColaborador = comando.ExecuteReader();
 
@@ -114,7 +114,7 @@ namespace UC12_Controle_Serviço_de_TI
             try
             {
                 conexao.Open();
-                comando.CommandText = "SELECT marca FROM equipamento";
+                comando.CommandText = "SELECT equipamento FROM tbl_servico";
 
                 MySqlDataReader readerMarca = comando.ExecuteReader();
 
@@ -138,7 +138,7 @@ namespace UC12_Controle_Serviço_de_TI
             try
             {
                 conexao.Open();
-                comando.CommandText = "SELECT modelo FROM equipamento";
+                comando.CommandText = "SELECT equipamento FROM tbl_servico";
 
                 MySqlDataReader readerModelo = comando.ExecuteReader();
 
@@ -167,7 +167,7 @@ namespace UC12_Controle_Serviço_de_TI
             try
             {
                 conexao.Open();
-                comando.CommandText = "INSERT INTO equipamento(entrada_equipamento, retirada_equipamento, marca, modelo) VALUES ('"+ textBoxDATAENTRADA.Text + "', '" + textBoxDATASAIDA.Text + "', '" + comboBox_marca.Text + "', '" + comboBox_Modelo.Text + "'); ";
+                comando.CommandText = "INSERT INTO tbl_servico(data_entrada, data_saida, equipamento, orcamento, status) VALUES ('"+ textBoxDATAENTRADA.Text + "', '" + textBoxDATASAIDA.Text + "', '" + comboBox_marca.Text + "', '" + textBoxORCAMENTO.Text + "', '" + textBoxSTATUS.Text + "'); ";
 
                 MySqlDataReader readerCliente = comando.ExecuteReader();
 
@@ -185,58 +185,7 @@ namespace UC12_Controle_Serviço_de_TI
             finally
             {
                 conexao.Close();
-
             }
-
-
-            try
-            {
-                conexao.Open();
-                comando.CommandText = "INSERT INTO orcamento(valor_total) VALUES ('" + textBoxORCAMENTO + "'); ";
-
-                MySqlDataReader readerCliente = comando.ExecuteReader();
-
-                while (readerCliente.Read())
-                {
-                    comboBox_clientes.Items.Add(readerCliente.GetString(0));
-                }
-            }
-
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message);
-            }
-
-            finally
-            {
-                conexao.Close();
-
-            }
-
-            try
-            {
-                conexao.Open();
-                comando.CommandText = "INSERT into ordem_de_servico (entrada_equipamento, retirada_equipamento, marca, modelo) VALUES ('" + textBoxDATAENTRADA + "', '" + textBoxDATASAIDA + "', '" + comboBox_marca.Text + "', '" + comboBox_Modelo.Text + "', ); ";
-
-                MySqlDataReader readerCliente = comando.ExecuteReader();
-
-                while (readerCliente.Read())
-                {
-                    comboBox_clientes.Items.Add(readerCliente.GetString(0));
-                }
-            }
-
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message);
-            }
-
-            finally
-            {
-                conexao.Close();
-
-            }
-
         }
 
         private void comboBox_clientes_SelectedIndexChanged(object sender, EventArgs e)
