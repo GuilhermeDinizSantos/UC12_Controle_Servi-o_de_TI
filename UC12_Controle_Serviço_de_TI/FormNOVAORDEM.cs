@@ -20,11 +20,14 @@ namespace UC12_Controle_Serviço_de_TI
         string servidor;
         MySqlConnection conexao;
         MySqlCommand comando;
+        Dictionary<string, string> dicionario = new Dictionary<string, string>();
 
         public FormNOVAORDEM()
         {
 
             InitializeComponent();
+
+
 
             servidor = "Server=localhost;Database=bd_ordem_ti;Uid=root;Pwd=";
             conexao = new MySqlConnection(servidor);
