@@ -49,10 +49,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox_clientes = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox_marca = new System.Windows.Forms.ComboBox();
-            this.comboBox_Modelo = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.textBoxENDERECO = new System.Windows.Forms.TextBox();
+            this.textBoxEQUIP = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label9
@@ -226,34 +224,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(408, 20);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.Size = new System.Drawing.Size(72, 13);
             this.label11.TabIndex = 41;
-            this.label11.Text = "Marca:";
-            // 
-            // comboBox_marca
-            // 
-            this.comboBox_marca.FormattingEnabled = true;
-            this.comboBox_marca.Location = new System.Drawing.Point(411, 36);
-            this.comboBox_marca.Name = "comboBox_marca";
-            this.comboBox_marca.Size = new System.Drawing.Size(231, 21);
-            this.comboBox_marca.TabIndex = 42;
-            // 
-            // comboBox_Modelo
-            // 
-            this.comboBox_Modelo.FormattingEnabled = true;
-            this.comboBox_Modelo.Location = new System.Drawing.Point(411, 73);
-            this.comboBox_Modelo.Name = "comboBox_Modelo";
-            this.comboBox_Modelo.Size = new System.Drawing.Size(231, 21);
-            this.comboBox_Modelo.TabIndex = 43;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(408, 60);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 13);
-            this.label12.TabIndex = 44;
-            this.label12.Text = "Modelo:";
+            this.label11.Text = "Equipamento:";
             // 
             // textBoxENDERECO
             // 
@@ -263,15 +236,21 @@
             this.textBoxENDERECO.TabIndex = 45;
             this.textBoxENDERECO.Text = " ";
             // 
+            // textBoxEQUIP
+            // 
+            this.textBoxEQUIP.Location = new System.Drawing.Point(411, 37);
+            this.textBoxEQUIP.Name = "textBoxEQUIP";
+            this.textBoxEQUIP.Size = new System.Drawing.Size(230, 20);
+            this.textBoxEQUIP.TabIndex = 46;
+            this.textBoxEQUIP.Text = " ";
+            // 
             // FormNOVAORDEM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxEQUIP);
             this.Controls.Add(this.textBoxENDERECO);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox_Modelo);
-            this.Controls.Add(this.comboBox_marca);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.comboBox_clientes);
             this.Controls.Add(this.label10);
@@ -323,9 +302,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox_clientes;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox_marca;
-        private System.Windows.Forms.ComboBox comboBox_Modelo;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxENDERECO;
+        private System.Windows.Forms.TextBox textBoxEQUIP;
     }
 }

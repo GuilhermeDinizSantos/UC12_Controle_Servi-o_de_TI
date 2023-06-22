@@ -39,7 +39,7 @@ namespace UC12_Controle_Serviço_de_TI
             try
             {
                 conexao.Open();
-                comando.CommandText = "SELECT nome FROM cliente";
+                comando.CommandText = "SELECT nome FROM tbl_cliente";
 
                 MySqlDataReader readerCliente = comando.ExecuteReader();
 
@@ -64,7 +64,7 @@ namespace UC12_Controle_Serviço_de_TI
             try
             {
                 conexao.Open();
-                comando.CommandText = "SELECT nome FROM colaborador";
+                comando.CommandText = "SELECT nome FROM tbl_colaborador";
 
                 MySqlDataReader readerCliente = comando.ExecuteReader();
 
@@ -110,54 +110,6 @@ namespace UC12_Controle_Serviço_de_TI
                 conexao.Close();
 
             }
-
-            try
-            {
-                conexao.Open();
-                comando.CommandText = "SELECT equipamento FROM tbl_servico";
-
-                MySqlDataReader readerMarca = comando.ExecuteReader();
-
-                while (readerMarca.Read())
-                {
-                    comboBox_marca.Items.Add(readerMarca.GetString(0));
-                }
-            }
-
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message);
-            }
-
-            finally
-            {
-                conexao.Close();
-
-            }
-
-            try
-            {
-                conexao.Open();
-                comando.CommandText = "SELECT equipamento FROM tbl_servico";
-
-                MySqlDataReader readerModelo = comando.ExecuteReader();
-
-                while (readerModelo.Read())
-                {
-                    comboBox_Modelo.Items.Add(readerModelo.GetString(0));
-                }
-            }
-
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message);
-            }
-
-            finally
-            {
-                conexao.Close();
-
-            }
         }
 
 
@@ -167,13 +119,14 @@ namespace UC12_Controle_Serviço_de_TI
             try
             {
                 conexao.Open();
-                comando.CommandText = "INSERT INTO tbl_servico(data_entrada, data_saida, equipamento, orcamento, status) VALUES ('"+ textBoxDATAENTRADA.Text + "', '" + textBoxDATASAIDA.Text + "', '" + comboBox_marca.Text + "', '" + textBoxORCAMENTO.Text + "', '" + textBoxSTATUS.Text + "'); ";
+                comando.CommandText = "INSERT INTO tbl_servico(data_entrada, data_saida, equipamento, orcamento, status) VALUES ('"+ textBoxDATAENTRADA.Text + "', '" + textBoxDATASAIDA.Text + "', '" + textBoxEQUIP.Text + "', '" + textBoxORCAMENTO.Text + "', '" + textBoxSTATUS.Text + "'); ";
 
                 MySqlDataReader readerCliente = comando.ExecuteReader();
 
                 while (readerCliente.Read())
                 {
                     comboBox_clientes.Items.Add(readerCliente.GetString(0));
+                    MessageBox.Show("Deu certo");
                 }
             }
 
